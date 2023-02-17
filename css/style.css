@@ -125,16 +125,35 @@ img {
 }
 
 /************************************************
-    SOLUZIONE RESPONSIVE
- ************************************************/
+SOLUZIONE RESPONSIVE
+************************************************/
+
+
+/* ********************************************************************************* */
+
+
+/* BONUS */
+/* Si può impostare im max width a lui perche sarà lo shcermo piu grande che capita in questo esercizio
+   e quindi gli altri piu piccoli saranno a cascata e non servirà specificare a loro volta il max-width:100%
+   lo lascio comunque commentato come debug */
+
+@media screen and (max-width: 1160px) {
+    .container {
+        width: 100%;
+    }
+
+}
+
+
 
 
  /* MEDIA QUERY FOR TABLET DISPLAY */
 
  @media screen and (max-width: 768px) {
-    .container {
+    /* DEBUG, sarebbe servito se non ci fosse stato lo schermo bonus */
+    /* .container {
         width: 100%;
-    }
+    } */
 
 }
 
@@ -143,20 +162,48 @@ img {
 
 
 @media screen and (max-width: 480px) {
-    .container {
+    /* debug */
+    /* .container {
         width: 100%;
-    }
+    } */
 
     .row {
         flex-wrap: wrap;
     }
 
-    .col {
+    .lessons .col {
         width: 100%;
-        margin: 20px 0;
+        margin: 30px 0;
+    }
+    
+    .steps {
+        margin-bottom: 0;
+    }
+    
+    .steps .col {
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .why-us{
+        background-color: rgb(32, 32, 32);
+        padding: 20px 0;
     }
 
 
+    .why-us .col-left {
+        width: 100%;
+        text-align: center;                
+    }
 
+    .why-us .col-right {
+        width: 100%;
+        padding: 30px 0;
+    }
+
+    .col-left img {
+        max-width: 80%;
+    }
     
 }
+
